@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$1" = "connect" ]; then
+	ssh -L $2:localhost:$2 $3
+fi
+
+if [ "$1" = "serve" ]; then
+	ssh -R $2:localhost:$2 $3
+fi
+
+
+
